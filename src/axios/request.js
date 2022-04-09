@@ -6,10 +6,7 @@ import Vue from 'vue';
 import echarts from "echarts";
 let loadingInstance = null // 加载全局的loading
 //公共baseURL
-//梦豪:http://192.168.3.23:9466
-//世垚:http://192.168.3.20:9466
-//正式环境：https://xsad.lkkjjt.com/    测试环境：http://112.51.25.33:21466/
-Vue.prototype.$baseURL = process.env.NODE_ENV === 'production' ? 'http://112.51.25.33:21466/' : 'http://192.168.3.23:9466/' //根据自己配置的反向代理去设置不同环境的baeUrl;
+Vue.prototype.$baseURL = process.env.NODE_ENV === 'production' ? 'http://test.com/' : 'http://test.com/' //根据自己配置的反向代理去设置不同环境的baeUrl;
 
 const instance = axios.create({ //创建axios实例，在这里可以设置请求的默认配置
     timeout: 15000, // 设置超时时间12s
